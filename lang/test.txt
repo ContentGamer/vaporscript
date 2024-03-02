@@ -1,3 +1,17 @@
+# a miserable while loop fail
+
 let res = 0;
 
 for i eq 0 to 10 { res = res + 1 }
+
+# the common language
+let x = 45;
+let y; let z;
+
+fn add(a, b) { a + b };
+print(add)
+print(add(x, 4 / 2))
+
+y = z = "Hello world!"
+print(y)
+print(z)
