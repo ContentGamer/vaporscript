@@ -1,0 +1,37 @@
+//vapor_script
+
+v_const constantVar: str = "Vapor";
+v_let letVar: str = "Rust";
+
+v_entry main(args : arr<str>) {
+    letVar = "Vapor";
+
+    v_settings({
+        advancedLogging: true
+    });
+
+    v_log(args);
+
+    if(args[0] == "Vaporazation") {
+        v_c num: int32 = v_num(args[0]);
+        v_log(num);
+    }
+}
+
+str exec(keyword : str) {
+    switch(keyword) {
+        is("Hi"):
+           v_ret "Hello";
+           v_break;
+        is("Execute"):
+           v_ret "Execute hi";
+           exec("Hi");
+
+           v_break;
+        is(ndef):
+           v_ret "Not defined";
+
+           v_break;
+    }
+    "No"
+}
